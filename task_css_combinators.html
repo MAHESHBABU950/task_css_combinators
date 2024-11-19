@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS COMBINATORS</title>
+    <style>
+    body{
+        background-color: black;
+        color: white;
+    }
+    
+    .heading{
+        text-decoration: underline;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        border: solid gray;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: orange;
+        color: black;
+        margin-bottom: 20px;
+    }
+    
+    #menu{
+        border: solid black;
+        height: 50px;
+        width: 50px;
+        margin-left: 20px;
+        margin-right: auto;
+        /* display: flex; */
+        border-radius: 10px;
+        background-color: rgb(255, 0, 0);
+        box-shadow: 0 0 20px white;
+        margin-bottom: 10px;
+    }
+    
+    #dash1, #dash2, #dash3{
+        border: solid 2px black;
+        margin-top: 8px;
+        width: 35px;
+        display: flex;
+        /* justify-content: center;
+        align-items: center;
+        align-self: center; */
+        margin-left: 3.5px;
+        border-radius: 5px;
+    }
+    
+    #dropdown{
+        border: solid white;
+        height: 110px;
+        width: 100px;
+        /* display: flex; */
+        justify-content: center;
+        align-items: center;
+        margin-left: 55px;
+        visibility: hidden;
+        /* box-shadow: 0 0 25px white; */
+        border-radius: 10px;
+        background-color: gray;
+    }
+    
+    #menu:active ~ #dropdown{
+        visibility: visible;
+    }</style>
+</head>
+
+<body>
+    <div class="heading">
+        <h1>
+            CSS COMBINATORS
+        </h1>
+    </div>
+
+    <p class="subtext">Click on the icon to see the menu</p>
+    <div id="menu">
+        <div id="dash1"></div>
+        <div id="dash2"></div>
+        <div id="dash3"></div>
+    </div>
+    <div id="dropdown">
+        <ol>
+            <li>Home</li>
+            <li>Chats</li>
+            <li>Calls</li>
+            <li>Log-out</li>
+        </ol>
+    </div>
+</body>
+
+</html>
